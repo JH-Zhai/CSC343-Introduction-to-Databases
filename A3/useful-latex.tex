@@ -1,0 +1,115 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{ wasysym }
+\setlength{\parskip}{6pt}
+\begin{document}
+
+
+\noindent
+{\bf University of Toronto}\\
+{\bf\sc CSC}{\large\bf{343}}\\[10pt]
+{\huge \bf Some useful LaTeX}\\
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\begin{tabular}{l|l|l|l}
+& Exclude these from $S2$  &  &  \\
+FD & when computing closure & Closure & Decision \\
+\hline
+1 & 1 & There's no way to get $C$ without this FD & keep \\
+2 & 2 & $A^+ = ACGBEFDH$ & discard \\
+3 & 2, 3 & $A^+ = ACBEFHGD$ & discard \\
+4 & 2, 3, 4 & $A^+ = ACEFHGDB$ & discard \\
+5 & 2, 3, 4, 5 & $A^+ = ACFHGDEB$ & discard \\
+6 & 2, 3, 4, 5, 6 & There's no way to get $F$ without this FD & keep \\
+7 & 2, 3, 4, 5, 7 & $BCG^+ = BCG$ & keep \\
+8 & 2, 3, 4, 5, 8 & There's no way to get $A$ without this FD & keep \\
+9 & 2, 3, 4, 5, 9 & There's no way to get $H$ without this FD & keep \\
+10 & 2, 3, 4, 5, 10 & Duplicate FD to ($14$) & discard \\
+11 & 2, 3, 4, 5, 10, 11 & There's no way to get $B$ without this FD & keep \\
+12 & 2, 3, 4, 5, 10, 12 & $H^+ = HEG$ & keep \\
+13 & 2, 3, 4, 5, 10, 13 & There's no way to get $E$ without this FD & keep \\
+14 & 2, 3, 4, 5, 10, 14 & There's no way to get $G$ without this FD & keep \\
+\end{tabular}
+
+\vspace*{1cm}
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+A & B & C & D & G & closure & FDs \\
+\hline
+\hline
+\checked &&&&& $A^+ = A$ & nothing \\
+\hline
+& \checked &&&& $B^+ = BCDAG$ & $B \rightarrow ACDG$ \\
+\hline
+&& \checked &&& $C^+ = CAG$ & $C \rightarrow AG$: violates BCNF; abort the projection \\
+\hline
+\end{tabular}
+
+\vspace*{1cm}
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\begin{minipage}[t]{1in}
+\begin{tabular}{lll}
+B & C & D\\
+\hline
+b & 1 & c \\
+f & 1 & g \\
+\end{tabular}
+\end{minipage}
+~~
+\begin{minipage}[t]{1in}
+\begin{tabular}{lll}
+C & A & G\\
+\hline
+1 & a & d \\
+\end{tabular}
+\end{minipage}
+~~
+\begin{minipage}[t]{1 in}
+\begin{tabular}{lll}
+E & B & F\\
+\hline
+2 & b & 4 \\
+2 & f & 5 \\
+\end{tabular}
+\end{minipage}
+~~
+\begin{minipage}[t]{1in}
+\begin{tabular}{lll}
+B & F & H\\
+\hline
+b & 4 & 3 \\
+f & 5 & 3 \\
+\end{tabular}
+\end{minipage}
+
+\vspace*{1cm}
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+& \multicolumn{2}{|c|}{Appears on} & \\
+\cline{2-3}
+Attribute & LHS & RHS & Conclusion \\
+\hline
+D
+& -- & -- & must be in every key \\
+\hline
+A
+& \checked & -- & must be in every key \\
+\hline
+E
+& -- & \checked & is not in any key \\
+\hline 
+B, C, F
+& \checked & \checked & must check \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}
+
+

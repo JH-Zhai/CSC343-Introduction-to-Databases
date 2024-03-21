@@ -1,0 +1,84 @@
+Notes:
+This data is described in a way the is not intended to suggest what your
+database design should be! This data is also based on what's happening in
+Toronto right now, but is not guaranteed to be accurate.
+
+
+=== Venues ===
+
+These are the venues:
+
+Massey Hall is at 178 Victoria Street in Toronto.  It is owned by The 
+Corporation of Massey Hall and Roy Thomson Hall.  It has these seats and 
+sections:
+- section "floor" has seats A1 through A10, and B1 through B10.
+  A1, A2, A3, and A8, A9, A10 are accessible.
+- section "balcony" has seats C1 through C5, none of which are
+  accessible.
+
+Not suprisingly, Roy Thomson Hall is also owned by The Corporation
+of Massey Hall and Roy Thomson Hall.  It is located at 60 Simcoe St
+in Toronto, and has these seats and sections:
+- all seats are in section "main hall"
+- row AA has seats 1 through 3
+- row BB has seats 1 through 8
+- row CC has seats 1 through 10
+
+ScotiaBank Arena is owned by Maple Leaf Sports & Entertainment. It is at
+40 Bay St in Toronto.  It has these seats and sections:
+- sections "100", "200", and "300"
+- each section has seats "row 1, seat 1" through "row 1, seat 5" and
+  "row 2, seat 1" through "row 2, seat 5"
+- all of section "100" is accessible.
+
+You can invent phone numbers for the owners.
+
+
+=== Concerts ===
+
+These are the concerts currently scheduled in our venues:
+
+Ron Sexsmith is playing Massey Hall on Saturday, December 3rd, at 7:30pm.
+Pricing is as follows:
+- floor seats are $130
+- balcony seats are $99
+
+Women's Blues Review is at Massey on Friday, November 25th, at 8:00pm.
+Pricing is as follows:
+- floor seats are $150
+- balcony seats are $125
+
+Mariah Carey - Merry Christmas to all is on at the ScotiaBank Arena on
+Friday, December 9th and Sunday, December 11th, both at 8:00pm.
+Friday tickets are at these prices:
+- section 100 seats are $986
+- section 200 seats are $244
+- section 300 seats are $176
+Sunday tickets are $50 cheaper.
+
+TSO - Elf in Concert is on at Roy Thompson Hall on
+Friday December 9th at 7:30 pm and on Saturday,
+December 10th at 2:30pm and 7:30 pm.
+- main hall seats (i.e., all seats) are $159
+
+
+=== Purchases ===
+
+These purchases have been made:
+
+Alicent Hightower has the username ahightower and has purchased
+- one floor seat (A5) ticket and one balcony seat (C2) ticket for
+  the Women's Blues Review on November 25.
+
+Daemon Targaryen has the username d_targaryen and has purchased
+- one floor seat (B3) ticket for the Ron Sexsmith concert on December 3.
+- a ticket for seat BB7 in the main hall for Elf in Concert on
+  Decmeber 10 at 7:30pm.
+
+Criston Cole has the username cristonc and has purchased
+- a ticket for seat 3 in row 1 of section 100 for
+  Mariah Carey - Merry Christmas on December 9.
+- one ticket for seat 3 in row 2 and another for seat 4 in row 2,
+  both in section 200 for Mariah Carey - Merry Christmas on December 11.
+
+You can invent the time when the above ticket purchases took place.

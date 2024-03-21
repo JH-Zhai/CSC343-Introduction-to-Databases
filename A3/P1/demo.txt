@@ -1,0 +1,91 @@
+csc343h-zhaijia3=> \i runner.txt
+-------------------- Loading schema and data: --------------------
+
+psql:schema.ddl:28: NOTICE:  drop cascades to 9 other objects
+DETAIL:  drop cascades to table ticketchema.concertname
+drop cascades to table ticketchema.own
+drop cascades to table ticketchema.venue
+drop cascades to table ticketchema.concert
+drop cascades to table ticketchema.seat
+drop cascades to table ticketchema.users
+drop cascades to table ticketchema.price
+drop cascades to table ticketchema.ticket
+drop cascades to view ticketchema.q3report
+DROP SCHEMA
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 2
+INSERT 0 3
+INSERT 0 76
+INSERT 0 4
+INSERT 0 7
+INSERT 0 13
+INSERT 0 3
+INSERT 0 7
+
+-------------------- Query 1: -----------------------------------
+
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+ concert_id |             concert_name              | total_sold | ticket_count | seat_count |       percentage
+------------+---------------------------------------+------------+--------------+------------+-------------------------
+         11 | Ron Sexsmith                          |        130 |            1 |         25 | 4.00000000000000000000%
+         22 | Women's Blues Review                  |        275 |            2 |         25 | 8.00000000000000000000%
+         33 | Mariah Carey - Merry Christmas to all |        986 |            1 |         30 | 3.33333333333333333300%
+         44 | Mariah Carey - Merry Christmas to all |        388 |            2 |         30 | 6.66666666666666666700%
+         55 | TSO - Elf in Concert                  |          0 |            0 |         21 | 0.00000000000000000000%
+         66 | TSO - Elf in Concert                  |          0 |            0 |         21 | 0.00000000000000000000%
+         77 | TSO - Elf in Concert                  |        159 |            1 |         21 | 4.76190476190476190500%
+(7 rows)
+
+DROP VIEW
+DROP VIEW
+DROP VIEW
+DROP VIEW
+DROP VIEW
+
+-------------------- Query 2: -----------------------------------
+
+CREATE VIEW
+                     owner_name                      | phone | venue_number
+-----------------------------------------------------+-------+--------------
+ Maple Leaf Sports & Entertainment                   | 67890 |            1
+ The Corporation of Massey Hall and Roy Thomson Hall | 12345 |            2
+(2 rows)
+
+DROP VIEW
+
+-------------------- Query 3: -----------------------------------
+
+CREATE VIEW
+ venue_id |    venue_name    | acc_count | seat_count |        percentage
+----------+------------------+-----------+------------+--------------------------
+        1 | Massey Hall      |         6 |         25 | 24.00000000000000000000%
+        2 | Roy Thomson Hall |         0 |         21 | 0.00000000000000000000%
+        3 | ScotiaBank Arena |        10 |         30 | 33.33333333333333333300%
+(3 rows)
+
+DROP VIEW
+
+-------------------- Query 4: -----------------------------------
+
+CREATE VIEW
+CREATE VIEW
+ username
+----------
+ cristonc
+(1 row)
+
+DROP VIEW
+DROP VIEW
